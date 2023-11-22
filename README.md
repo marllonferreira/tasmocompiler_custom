@@ -50,7 +50,7 @@ Você deve fazer upload apenas `firmware.bin` ou `firmawre.bin.gz` rquivar para 
 
 ##### Maneira super fácil (graças a @meingraham e @ Jason2866)
 
-Clique neste [ link para Gipod](https://gitpod.io/#https://github.com/benzino77/tasmocompiler).  Você precisa ter uma conta [Github](https://github.com) e autorizar o Gitpod a acessá-la. Se você não tiver, bastam alguns cliques para criar uma conta no Github. Depois de um tempo, uma nova guia do navegador deve abrir com o TasmoCompiler. Caso tenha pop-up bloqueado em seu navegador você terá que aceitar a nova aba aberta (1 e 2). Se a nova aba não abrir ou você não conseguir ver a notificação pop-up, clique no link Visualização de portas (3) e depois em Abrir navegador (4):
+Clique neste [ link para Gipod](https://gitpod.io/#https://github.com/marllonferreira/tasmocompiler_custom).  Você precisa ter uma conta [Github](https://github.com) e autorizar o Gitpod a acessá-la. Se você não tiver, bastam alguns cliques para criar uma conta no Github. Depois de um tempo, uma nova guia do navegador deve abrir com o TasmoCompiler. Caso tenha pop-up bloqueado em seu navegador você terá que aceitar a nova aba aberta (1 e 2). Se a nova aba não abrir ou você não conseguir ver a notificação pop-up, clique no link Visualização de portas (3) e depois em Abrir navegador (4):
 
 ![Open Browser](./docs/images/gitpod_newtab.png)
 
