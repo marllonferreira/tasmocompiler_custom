@@ -9,35 +9,35 @@
   <img src="./docs/logo/tasmocompiler-full.svg" width="40%">
 </div>
 
-#### What it is?
+#### O que é isso?
 
-TasmoCompiler is a simple web GUI which allows you to compile fantastic [Tasmota](https://github.com/arendst/Sonoff-Tasmota) firmware with your own settings:
+TasmoCompiler é uma interface web simples que permite compilar firmware [Tasmota](https://github.com/arendst/Sonoff-Tasmota) fantástico com suas próprias configurações:
 
-- You can select which board you are building firmware for
-- You can select which features/sensors of Tasmota firmware you want to use (description of available features can be found in [FEATURES DESCRIPTION](https://github.com/benzino77/tasmocompiler/blob/master/FEATURES_DESC.md) file)
-- Credentials for your IOT WiFi network, so even after unexpected problems with the device (complete lost of configuration), credentials for your network will still be there, but mainly you don't have to connect to AP, served by Tasmota to configure your Home WiFi
-- You can select Tasmota version you want to compile. You can select `development` bleading edge version, or latest stable release if this is the one you like
-- Language of Tasmota GUI interface
-- You can also provide custom `#defines` if you want to build even more suitable firmaware for your needs
+- Você pode selecionar para qual placa você está construindo o firmware
+- Você pode selecionar quais recursos/sensores do firmware Tasmota deseja usar (a descrição dos recursos disponíveis pode ser encontrada no arquivo [FEATURES DESCRIPTION](https://github.com/benzino77/tasmocompiler/blob/master/FEATURES_DESC.md) file)
+- Credenciais para sua rede IOT WiFi, então mesmo após problemas inesperados com o dispositivo (perda total de configuração), as credenciais para sua rede ainda estarão lá, mas principalmente você não precisa se conectar ao AP, servido pela Tasmota para configurar sua casa Wi-fi
+- Você pode selecionar a versão do Tasmota que deseja compilar. Você pode selecionar `development`  versão mais recente ou a versão estável mais recente, se esta for a que você gosta
+- Idioma da interface GUI do Tasmota
+- Você também pode fornecer um firmware personalizado `#defines` se quiser criar um firmware ainda mais adequado às suas necessidades.
 
-#### Why?
+#### Por que?
 
-Well, there are two reasons. First is that I want to build my first application written in NodeJS/React. The second one is based on the observation that everytime I prepare a new device I have to start atom with platformio installed, configure all `#defines` (well, I have template which I copy) and prepare `platformio.ini`, create a branch from version I like to use, etc..
+Bem, há duas razões. A primeira é que quero construir meu primeiro aplicativo escrito em NodeJS/React. A segunda é baseada na observação de que toda vez que preparo um novo dispositivo tenho que iniciar o atom com o platformio instalado, configurar tudo  `#defines` (bom, tenho um template que copio) e preparar `platformio.ini`, criar um branch da versão que gosto de usar, etc. ..
 
-That's why I decided to prepare a solution which is easier to use (just a few clicks) and does not require knowledge how to install dev environment to build custom firmware.
+Por isso decidi preparar uma solução que seja mais fácil de usar (apenas alguns cliques) e que não exija conhecimento de como instalar o ambiente dev para construir firmware customizado.
 
-#### How it works?
+#### Como funciona?
 
-The easiest way is to look at the screenshots (the whole process is five steps only). After compilation you will be able to download four (or three for ESP32 boards) files:
+A maneira mais fácil é olhar as capturas de tela (todo o processo leva apenas cinco etapas). Após a compilação você poderá baixar quatro (ou três para placas ESP32) arquivos:
 
-1. Your new `firmware.bin` file, which can be uploaded to your device via Tasmota WebGUI, espotool, ESPEasy flasher or any other tool you used to use to flash your device
-2. Compressed file `firmware.bin.gz` (not available for ESP32 boards)
-3. `platformio_override.ini` file, to check what options for platformio were used to compile the custom firmware file
-4. `user_config_override.h` file to check what features are included/excluded from resulting firmware
+1. Seu novo `firmware.bin` arquivo, que pode ser carregado em seu dispositivo via Tasmota WebGUI, espotool, ESPEasy flasher ou qualquer outra ferramenta que você usou para atualizar seu dispositivo
+2. Arquivo compactado `firmware.bin.gz` (não disponível para placas ESP32)
+3. `platformio_override.ini` arquivo, para verificar quais opções do platformio foram usadas para compilar o arquivo de firmware personalizado
+4. `user_config_override.h` arquivo para verificar quais recursos estão incluídos/excluídos do firmware resultante
 
-The links to download these files will show up under _Compiling progress_ field (look at the bottom of the last screenshot). **These links will show up only when compilation is successful**.
+Os links para baixar esses arquivos aparecerão no campo Progresso da compilação (veja a parte inferior da última captura de tela). Esses links aparecerão somente quando a compilação for bem-sucedida .
 
-You have to upload only `firmware.bin` or `firmawre.bin.gz` file to your device. How to do that is perfeclty described on [Tasmota wiki](https://github.com/arendst/Sonoff-Tasmota/wiki/Flashing).
+Você deve fazer upload apenas `firmware.bin` ou `firmawre.bin.gz` rquivar para o seu dispositivo. Como fazer isso está perfeitamente descrito no [Tasmota wiki](https://github.com/arendst/Sonoff-Tasmota/wiki/Flashing).
 
 ![Step01](./docs/images/step01.png)
 ![Step02](./docs/images/step02.png)
@@ -46,56 +46,56 @@ You have to upload only `firmware.bin` or `firmawre.bin.gz` file to your device.
 ![Step05](./docs/images/step05.png)
 ![Compile01](./docs/images/compile01.png)
 
-#### How to start using TasmoCompiler?
+#### Como começar a usar o TasmoCompiler?
 
-##### Super easy way (Thanks to @meingraham and @Jason2866)
+##### Maneira super fácil (graças a @meingraham e @ Jason2866)
 
-Click this [link to Gipod](https://gitpod.io/#https://github.com/benzino77/tasmocompiler). You have to have [Github](https://github.com) account and authorize Gitpod to access it. If you don't have it, it is just few clicks to create account on Github. After a while new browser tab should open with TasmoCompiler. If you have pop-up blocked in your browser you will have to accept the new tab open (1 and 2). If the new tab does not open or you cannot see the pop-up notification, click on the _Ports view_ link (3) and then on _Open browser_ (4):
+Clique neste [ link para Gipod](https://gitpod.io/#https://github.com/benzino77/tasmocompiler).  Você precisa ter uma conta [Github](https://github.com) e autorizar o Gitpod a acessá-la. Se você não tiver, bastam alguns cliques para criar uma conta no Github. Depois de um tempo, uma nova guia do navegador deve abrir com o TasmoCompiler. Caso tenha pop-up bloqueado em seu navegador você terá que aceitar a nova aba aberta (1 e 2). Se a nova aba não abrir ou você não conseguir ver a notificação pop-up, clique no link Visualização de portas (3) e depois em Abrir navegador (4):
 
 ![Open Browser](./docs/images/gitpod_newtab.png)
 
-###### Note
+###### Observação
 
-You have to remember that all compilation is performed on Gitpod servers, so you have to decide if you want to put sensitive data like Wifi/MQTT credentials to Gitpod hands :see_no_evil: :hear_no_evil: :speak_no_evil:
+Você deve lembrar que toda a compilação é realizada em servidores Gitpod, então você deve decidir se deseja colocar dados confidenciais, como credenciais Wifi/MQTT, nas mãos do Gitpod :see_no_evil: :hear_no_evil: :speak_no_evil:
 
-##### Easy way
+##### Jeito fácil
 
-Start TasmoCompiler in docker:
+Inicie o TasmoCompiler em docker:
 
 `docker pull benzino77/tasmocompiler`
 
 `docker run --rm --name tasmocompiler -p 3000:3000 benzino77/tasmocompiler`
 
-Then point your browser to http://localhost:3000
+Em seguida, aponte seu navegador para http://localhost:3000
 
-If you want to see debug messages on docker console you can run a container with env variable:
+Se quiser ver mensagens de depuração no console docker, você pode executar um contêiner com a variável env:
 
 `docker run --rm --name tasmocompiler -p 3000:3000 -e DEBUG=server,git,compile benzino77/tasmocompiler`
 
-- `server` to see http server messages
-- `git` to see git operation messages
-- `compile` to see messages during compilation
+- `server` para ver mensagens do servidor http
+- `git` para ver mensagens de operação git
+- `compile` para ver mensagens durante a compilação
 
-You can also specify different port on which TasmoCompiler will be available on the host:
+Você também pode especificar uma porta diferente na qual o TasmoCompiler estará disponível no host:
 
 `docker run --rm --name tasmocompiler -p 8080:3000 benzino77/tasmocompiler`
 
-Then point your browser to http://localhost:8080
+Em seguida, aponte seu navegador para http://localhost:8080
 
-##### Less easy way
+##### Maneira menos fácil
 
 1. Install `NodeJS` and `Python 3.6.x` or later
 2. Install [`yarn`](https://yarnpkg.com/en/docs/install)
 3. Install [`platformio`](https://docs.platformio.org/en/latest/installation.html)
-4. Clone/download the repository from github and change directory to the cloned repo
+4. Clone/baixe o repositório do github e mude o diretório para o repositório clonado
 5. run `yarn install`
 6. run `yarn build`
 7. run `node server/app.js`
-8. point your browser to http://localhost:3000
+8. aponte seu navegador para http://localhost:3000
 
-#### How to use "Custom parameters"?
+#### Como usar "Parâmetros personalizados"?
 
-The configuration options are limited on purpose. I don't want to _overload_ the GUI with too many options. But there is _Custom prameters_ step which allows you to define other Tasmota parameters. Let's say you want to define your MQTT broker and credentials for it. You have to put these lines in _Custom parameters_ field:
+he configuration options are limited on purpose. I don't want to _overload_ the GUI with too many options. But there is _Custom prameters_ step which allows you to define other Tasmota parameters. Let's say you want to define your MQTT broker and credentials for it. You have to put these lines in _Custom parameters_ field:
 
 ```C++
 #ifdef MQTT_HOST
